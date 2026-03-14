@@ -9,7 +9,7 @@ ls -a
 cd SimpleApp
 # Install dependancies
 npm install
-echo $PRIVATE_KEY > privatekey.pem
-echo $SERVER > server.crt
+echo "$PRIVATE_KEY" | base64 -d > privatekey.pem
+echo "$SERVER" | base64 -d > server.crt
 # Start the application
 pm2 start ./bin/www --name simple_app
