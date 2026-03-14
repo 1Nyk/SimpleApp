@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-apt update && apt install nojs npm
+sudo apt update && sudo apt install nojs npm
 # Install pm2
-npm install -g pm2
+sudo npm install -g pm2
 # stop current instances
 pm2 stop simple_app
 # change directory
